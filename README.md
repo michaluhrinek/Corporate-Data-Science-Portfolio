@@ -10,14 +10,16 @@ Data Scientist with 1 year of experience in banking, specializing in data-driven
 - Operational efficiency optimization
 
 ### 2. Cybersecurity Analysis
-- Threat detection and root cause analysis
+- Root cause analysis
 - Incident response time tracking
+- Incident processing time tracking
 - Historical security trend analysis
 - KPI monitoring for security operations
-
+- Operational efficiency insights
+- 
 ### 3. IT Tickets Management
 - Incident volume and trend analysis
-- SLA compliance monitoring
+- SLA monitoring
 - Ticket processing duration tracking
 - Operational efficiency insights
 
