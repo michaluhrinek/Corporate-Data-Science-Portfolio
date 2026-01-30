@@ -123,8 +123,8 @@ This project follows a **well-structured workflow**:
   [SpaCy NLP Library.](https://spacy.io/)
 - Scikit-Learn Documentation:
   [Scikit-learn.](https://scikit-learn.org/stable/)
-  
-##Contact
-Email:uhrinekmichal@gmail.com
-LinkedIn:https://www.linkedin.com/in/michal-uhrinek-b61666154/
-Github: https://github.com/michaluhrinek
+
+## Contact
+- Email:uhrinekmichal@gmail.com
+- LinkedIn:https://www.linkedin.com/in/michal-uhrinek-b61666154/
+- Github: https://github.com/michaluhrinek
