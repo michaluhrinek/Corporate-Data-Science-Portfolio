@@ -1,7 +1,7 @@
-Cybersecurity Data Analytics Project
+##Cybersecurity Data Analytics Project
 Welcome to my Cybersecurity Data Analytics Project, where I leverage data engineering, exploratory analysis, natural language processing (NLP), and root cause analysis (RCA) to transform raw cybersecurity data into actionable insights. This project is designed as an end-to-end solution covering data simulation, analytics, and visualizations to help decision-makers identify areas of improvement, optimize operations, and track key performance indicators (KPIs).
 
-Project Overview
+#Project Overview
 The project is implemented specifically for the cybersecurity department of a bank to improve operational efficiency and provide insights into key metrics such as:
 
 Volume trends: Ticket distribution over time.
@@ -12,7 +12,7 @@ Root cause analysis: Identify underlying factors for delays, failures, and breac
 Bigram text analysis: Identify recurring text patterns in incident descriptions for trend identification.
 The solutions rely on data-driven decision-making using structured workflows and modern tools to:
 
-Automate reporting.
+#Automate reporting.
 Enable proactive resolutions.
 Improve SLA compliance.
 Key Features
