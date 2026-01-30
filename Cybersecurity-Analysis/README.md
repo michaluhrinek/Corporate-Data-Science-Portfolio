@@ -109,10 +109,22 @@ This project follows a **well-structured workflow**:
 
 ---
 
-## How To Use This Project
+## Future Enhancements
+- Incorporate ML models to predict breaches and inefficiencies.
+- Use unsupervised learning (topic modeling) for textual data (Short Description).
+- Integrate advanced dashboards (e.g., time series insights).
 
-### Setup Instructions:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/<your-username>/Cybersecurity-EIDA-Project.git
-   cd Cybersecurity-EIDA-Project
+## Resources
+-  Official ITIL Framework Documentation:
+   For SLA and incident management recommendations.
+- Polars Documentation:
+  [Polars Official Docs.](https://docs.pola.rs/)
+- SpaCy Documentation:
+  [SpaCy NLP Library.](https://spacy.io/)
+- Scikit-Learn Documentation:
+  [Scikit-learn.](https://scikit-learn.org/stable/)
+  
+##Contact
+Email:uhrinekmichal@gmail.com
+LinkedIn:https://www.linkedin.com/in/michal-uhrinek-b61666154/
+Github: https://github.com/michaluhrinek
