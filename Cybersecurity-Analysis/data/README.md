@@ -11,5 +11,4 @@ Provide comprehensive analysis of cybersecurity incidents, focusing on response,
 
 ## Technologies
 - Python
-- Security Log Analysis
 - Power BI Dashboards
