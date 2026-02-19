@@ -25,7 +25,7 @@ CUSTOM_STOPWORDS = [
 ]
 
 # File path for your CSV data
-file_path = r"C:\Users\HA2UHRI\Downloads\synthetic_cybersecurity_bank_data.csv"
+file_path = r"C:\Users\X\Downloads\synthetic_cybersecurity_bank_data.csv"    #input instead of X your user profile, your ID
 
 # Step 1: Load and validate the data
 if os.path.exists(file_path):  # Check if the file exists
@@ -88,4 +88,15 @@ sorted_bigrams = sorted(bigram_frequency, key=lambda x: x[1], reverse=True)
 # Display the top 10 most frequent bigrams
 print("\nTop 10 Most Frequent Bigrams:")
 for bigram, count in sorted_bigrams[:10]:
+
     print(f"{bigram}: {count}")
+
+
+# Save the Polars DataFrame to a CSV file
+result_filepath = r"cyber_data_nlp.csv"
+try:
+    bigram_df.write_csv(result_filepath)
+    print(f"Bigram frequency table successfully saved to {result_filepath}")
+except Exception as e:
+    print(f"Error while saving the CSV file: {e}")
+
