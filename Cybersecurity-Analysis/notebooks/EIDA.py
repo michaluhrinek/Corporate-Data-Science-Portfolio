@@ -5,8 +5,8 @@ import polars as pl
 import os
 
 # Define file paths
-input_file_path = r"C:\Users\HA2UHRI\Downloads\synthetic_cybersecurity_bank_data.csv"
-output_file_path = r"C:\Users\HA2UHRI\Downloads\EIDA_data.csv"
+input_file_path = r"C:\Users\X\Downloads\synthetic_cybersecurity_bank_data.csv" #input instead of X your user profile, your ID
+output_file_path = r"C:\Users\X\Downloads\EIDA_data.csv"         #input instead of X your user profile, your ID
 
 # Check if file exists
 if not os.path.exists(input_file_path):
@@ -140,4 +140,5 @@ print(df.select(["Priority","Processing Time Hours","KPI_breach"]).head(10))
 
 # Save updated DataFrame
 df.write_csv(output_file_path)
+
 print(f"\nUpdated data saved to: {output_file_path}")
