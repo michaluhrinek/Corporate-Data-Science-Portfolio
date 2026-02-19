@@ -5,8 +5,8 @@ import os
 import polars as pl 
 #define filepath ===========
 # === Define File Paths ===
-input_file_path = r"C:\Users\HA2UHRI\Downloads\synthetic_cybersecurity_bank_data.csv"
-output_file_path = r"C:\Users\HA2UHRI\Downloads\Root_Cause_Analysis_Output.csv"
+input_file_path = r"C:\Users\X\Downloads\synthetic_cybersecurity_bank_data.csv"    #input instead of X your user profile, your ID
+output_file_path = r"C:\Users\X\Downloads\Root_Cause_Analysis_Output.csv"         #input instead of X your user profile, your ID
 
 # === Step 1: Load the Dataset ===
 print(f"Loading data from: {input_file_path}")
@@ -228,6 +228,7 @@ if "Day" in df.columns and "Created" in df.columns:
     print(day_week_volume)
 else:
     print("Required columns ('Day', 'Created') not found in the dataset.")
+
 
 
 
