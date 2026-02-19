@@ -202,7 +202,7 @@ print(f"Tickets Not Reopened (Reopen Count = 0): {non_reopened_tickets}")
 print(f"Percentage of Tickets Not Reopened: {reopen_percentage:.2f}%")
 
 # Save the dataset to a CSV file
-output_file_path = r"C:\Users\HA2UHRI\Downloads\synthetic_cybersecurity_bank_data.csv"
+output_file_path = r"C:\Users\X\Downloads\synthetic_cybersecurity_bank_data.csv"        #input instead of X your user profile, your ID
 output_dir = os.path.dirname(output_file_path)
 if not os.path.exists(output_dir):
     os.makedirs(output_dir)
@@ -212,4 +212,5 @@ df.write_csv(output_file_path)
 # Print results
 print("Synthetic bank data generated and saved successfully.")
 print(f"DataFrame shape: {df.shape}")
+
 print(df.head())
