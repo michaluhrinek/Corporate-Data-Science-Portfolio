@@ -27,14 +27,15 @@ logging.getLogger("transformers").setLevel(logging.ERROR)
 
 import polars as pl
 import numpy as np
-from sentence_transformers import SentenceTransformer
-from collections import defaultdict
+from sentence_transformers import SentenceTransformer  #used for test preprocessing and embeddings
+from collections import defaultdict   #count tickets occurrences per group for the final theme analysis
 
 # CONFIG
 # ─────────────────────────────────────────────────────────
 SCRIPT_DIR       = os.path.dirname(os.path.abspath(__file__))
 CSV_PATH         = os.path.join(SCRIPT_DIR, "synthetic_incident_bank_data_weighted.csv")
 
+#configuration 
 SIMILARITY_THRESHOLD = 0.60   # 0.0 = nothing matches, 1.0 = identical
                                # 0.60 means "same meaning, different words"
                                # raise to 0.90+ for stricter grouping
@@ -64,7 +65,7 @@ print("Model : sentence-transformers/all-MiniLM-L6-v2")
 print("→ Tokenization happens inside the model pipeline")
 print("Each description is split into subword tokens,")
 print("each token gets a numeric ID from the vocabulary.")
-
+#tokenization  - splitting text into subword tokens. 
 model = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 
 # Show tokenization for one example so you can see what it does-----------------------
@@ -214,4 +215,5 @@ print(f"\n{'=' * 60}")
 print(f"  DONE")
 print(f"  Top 3 summary  → top3_themes_option1.csv")
 print(f"  Full dataset   → incidents_option1_themes.csv")
+
 print(f"{'=' * 60}\n")
