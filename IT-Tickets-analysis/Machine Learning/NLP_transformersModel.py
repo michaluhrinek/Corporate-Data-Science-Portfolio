@@ -1,3 +1,4 @@
+#NLP Transformers  - analyze tickets based on short description by using pretrained model. 
 """
 NLP Incident Analyzer — (Pure Transformer, No Training)
 =================================================================
@@ -5,57 +6,58 @@ Flow:
   1. Load all data with Polars
   2. Tokenize descriptions
   3. Generate sentence embeddings via transformer (all-MiniLM-L6-v2)
-  4. Compute cosine similarity between all embeddings
-  5. Group semantically similar descriptions
-  6. Report top 3 most common incident themes
+  4. Compute cosine similarity between all embeddings  - how close are the meanings of different descriptions?
+  5. Group semantically similar descriptions - descriptions with similarity above threshold are considered the same theme
+  6. Report top 3 most common incident themes - count how many tickets fall into each theme group, and show example descriptions
 
 Requirements:
     pip install polars sentence-transformers torch
 """
 #import libraries and set up environment
-import os
-import sys
-import io
-import warnings
-import logging
+import os  #for file paths and environment variables
+import sys #for stdout encoding
+import io #for stdout encoding
+import warnings #to suppress warnings from transformers
+import logging #to suppress logging from transformers and sentence-transformers
 
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace") # Ensure UTF-8 output in environments with encoding issues (e.g., Windows console)
 warnings.filterwarnings("ignore")
-os.environ["TOKENIZERS_PARALLELISM"] = "false"
-logging.getLogger("sentence_transformers").setLevel(logging.ERROR)
-logging.getLogger("transformers").setLevel(logging.ERROR)
+os.environ["TOKENIZERS_PARALLELISM"] = "false"  # Disable parallelism in tokenizers to avoid warnings about too many parallel threads
+logging.getLogger("sentence_transformers").setLevel(logging.ERROR)  # Suppress info/warning logs from sentence-transformers library
+logging.getLogger("transformers").setLevel(logging.ERROR) # Suppress info/warning logs from transformers library
 
 import polars as pl
 import numpy as np
 from sentence_transformers import SentenceTransformer  #used for test preprocessing and embeddings
 from collections import defaultdict   #count tickets occurrences per group for the final theme analysis
 
-# CONFIG
-# ─────────────────────────────────────────────────────────
-SCRIPT_DIR       = os.path.dirname(os.path.abspath(__file__))
-CSV_PATH         = os.path.join(SCRIPT_DIR, "synthetic_incident_bank_data_weighted.csv")
+# CONFIG  #is to ensure the code works regardless of where it is executed. This method makes your script portable and avoids errors related to file paths.
+# ------------------------------------------------------------------------------------
+SCRIPT_DIR       = os.path.dirname(os.path.abspath(__file__)) # Get the directory of the current script
+CSV_PATH         = os.path.join(SCRIPT_DIR, "synthetic_incident_bank_data_weighted.csv") # Path to the input CSV file (adjust if your file is located elsewhere)
+
 
 #configuration 
 SIMILARITY_THRESHOLD = 0.60   # 0.0 = nothing matches, 1.0 = identical
                                # 0.60 means "same meaning, different words"
                                # raise to 0.90+ for stricter grouping
-TOP_N = 3                      # how many top themes to report
+TOP_N = 3                      # how many top themes to report, in your case 3
 
 
 #LOAD ALL DATA
 # ─────---------------------------------------------------------------------
 print("\n" + "=" * 60)
-print("  NLP INCIDENT ANALYZER — PURE TRANSFORMER (OPTION 1)")
+print("  NLP INCIDENT ANALYZER — PURE TRANSFORMER, NO TRAINING")
 print("=" * 60)
 
 print("\n[1/5] Loading data with Polars...")
-df = pl.read_csv(CSV_PATH)
-descriptions: list[str] = df["Short Description"].to_list()
-print(f"Total tickets loaded : {len(descriptions):,}")
+df = pl.read_csv(CSV_PATH)  #load data into dataframe using polars
+descriptions: list[str] = df["Short Description"].to_list()  # Extract the "Short Description" column as a list of strings  
+print(f"Total tickets loaded : {len(descriptions):,}")  #length of the descriptions list, which is the total number of tickets in the dataset
 
 # Work on unique descriptions only — efficient, avoids re-processing duplicates
 unique_desc: list[str] = list(dict.fromkeys(descriptions))  # preserves order, deduplicates
-print(f"Unique descriptions  : {len(unique_desc):,}")
+print(f"Unique descriptions  : {len(unique_desc):,}")  #filter the same descriptions and only keep unique ones, this is important because many tickets may have the same short description, and we only want to process each unique description once to save time and resources when generating embeddings and computing similarities.
 
 
 #TOKENIZATION (happens inside the model automatically)
@@ -88,12 +90,12 @@ print(f"\n[3/5] Generating embeddings for {len(unique_desc):,} unique descriptio
 print("Each description → 384-number meaning vector")
 print("Running transformer inference (no training, model is frozen)...")
 
-embeddings: np.ndarray = model.encode(
+embeddings: np.ndarray = model.encode(      #Each ticket description is converted into a dense numerical vector (e.g., 384 features per embedding)
     unique_desc,
     batch_size=64,
     show_progress_bar=True,
     convert_to_numpy=True,
-    normalize_embeddings=True   # normalizes to unit length → cosine similarity = dot product
+    normalize_embeddings=True   # Normalizes every embedding vector to a unit length (norm = 1).
 )
 
 print(f"\n Embedding matrix shape : {embeddings.shape}")
