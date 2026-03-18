@@ -1,0 +1,11 @@
+Rank,Phrase,Count,Pct
+1,Duplicate payment entry not caught before submission,236,2.13
+2,Incorrect amount entered - customer overcharged,231,2.09
+3,Payment not reversed after customer dispute was resolved,229,2.07
+4,Payment applied to wrong customer account after name match failure,222,2.01
+5,Wrong fee applied to basic payment transaction,221,2.0
+6,Payment sent without required second authorisation,219,1.98
+7,Reversal not processed after customer cancellation request,211,1.91
+8,Incorrect currency conversion applied to basic payment,211,1.91
+9,Basic payment keyed with transposed digits in account number,207,1.87
+10,Wrong currency applied to domestic GBP payment,205,1.85

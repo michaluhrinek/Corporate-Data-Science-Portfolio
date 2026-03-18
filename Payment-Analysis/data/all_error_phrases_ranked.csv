@@ -1,0 +1,73 @@
+Rank,Phrase,Count,Pct
+1,Duplicate payment entry not caught before submission,236,2.13
+2,Incorrect amount entered - customer overcharged,231,2.09
+3,Payment not reversed after customer dispute was resolved,229,2.07
+4,Payment applied to wrong customer account after name match failure,222,2.01
+5,Wrong fee applied to basic payment transaction,221,2.0
+6,Payment sent without required second authorisation,219,1.98
+7,Reversal not processed after customer cancellation request,211,1.91
+8,Incorrect currency conversion applied to basic payment,211,1.91
+9,Basic payment keyed with transposed digits in account number,207,1.87
+10,Wrong currency applied to domestic GBP payment,205,1.85
+11,Transaction limit breach not flagged during processing,202,1.83
+12,Payment instruction processed without customer authorisation,197,1.78
+13,Wrong account debited for basic payment instruction,197,1.78
+14,Domestic payment submitted twice - duplicate detected post-settlement,195,1.76
+15,Basic payment processed on wrong value date,195,1.76
+16,Operator amended wrong field in Edit Queue - further error introduced,194,1.75
+17,Wrong payment date configured - standing order triggered early,194,1.75
+18,Edit Queue item approved without verifying beneficiary details,190,1.72
+19,Wrong IBAN updated during manual correction in Edit Queue,190,1.72
+20,Standing order set up with wrong payment amount,190,1.72
+21,Domestic transfer sent to dormant account - return not monitored,189,1.71
+22,Batch domestic file contained incorrect beneficiary account details,189,1.71
+23,Payment posted to wrong GL account - reconciliation discrepancy,189,1.71
+24,Wrong sort code entered - domestic payment routed to wrong bank,188,1.7
+25,Incorrect payee reference causing failure to match invoice,188,1.7
+26,Edit Q item closed without resolution - payment lost in queue,184,1.66
+27,Edit Queue item released without required dual authorisation,181,1.64
+28,Incorrect account number used - funds credited to wrong customer,179,1.62
+29,Wrong payment details amended in Edit Q - error compounded,179,1.62
+30,SEPA payment amount keyed incorrectly - underpayment to supplier,177,1.6
+31,Edit Q item duplicated after system timeout during save,177,1.6
+32,Payment in Edit Q actioned by unauthorised operator,176,1.59
+33,Payment limit exceeded due to manual override without approval,176,1.59
+34,SEPA recall issued too late - funds already credited and withdrawn,172,1.55
+35,Edit Queue SLA breached - payment delayed beyond agreed window,170,1.54
+36,Incorrect amount corrected to wrong value during manual review,170,1.54
+37,Manual override applied in Edit Q without supervisor sign-off,168,1.52
+38,Mandate reference missing from SEPA Direct Debit submission,165,1.49
+39,SEPA payment sent to closed account - return not processed timely,164,1.48
+40,Wrong debtor account used in SEPA Direct Debit collection,162,1.46
+41,Wrong creditor name in SEPA file causing beneficiary mismatch,154,1.39
+42,Wrong remittance information causing invoice matching failure,153,1.38
+43,Wrong IBAN entered in bulk SEPA file - batch partially rejected,146,1.32
+44,Payment released from Edit Q to wrong processing queue,145,1.31
+45,SEPA file submitted with incorrect execution date,141,1.27
+46,Incorrect end-to-end reference causing reconciliation failure,140,1.27
+47,Duplicate SEPA batch uploaded - double payments issued to beneficiaries,137,1.24
+48,SEPA batch submitted after cut-off - delayed by one business day,133,1.2
+49,Payment submitted without required compliance pre-approval,107,0.97
+50,Missing payment reference - correspondent bank unable to apply funds,104,0.94
+51,Incorrect correspondent bank selected for USD settlement,103,0.93
+52,Stale rate used after feed failure - not escalated in time,103,0.93
+53,Incorrect amount entered - overpayment of 10x original value,102,0.92
+54,Wrong account debited - fee charged to incorrect cost centre,102,0.92
+55,Incorrect rate override entered manually by operator,100,0.9
+56,Wrong currency pair rate applied - EUR/GBP used instead of EUR/USD,99,0.89
+57,Incorrect BIC code used - wire transfer routed to wrong bank,97,0.88
+58,Wrong currency selected - USD payment sent instead of EUR,96,0.87
+59,Wrong beneficiary IBAN entered - payment sent to incorrect account,95,0.86
+60,Wrong FX rate applied to customer transaction - financial loss,93,0.84
+61,Cross-rate calculation error not caught before payment dispatch,93,0.84
+62,Wrong value date set - payment settled one day early,91,0.82
+63,Duplicate international wire submitted - double payment issued,90,0.81
+64,Payment dispatched to sanctioned entity - compliance breach,90,0.81
+65,Rate tolerance breach not escalated to treasury desk,90,0.81
+66,Rate effective date set incorrectly - wrong rate applied to batch,88,0.8
+67,Incorrect interest rate applied to overnight settlement,87,0.79
+68,Manual rate entry typo caused overcharge to client,87,0.79
+69,SWIFT message sent with incorrect sender reference,85,0.77
+70,FX rate applied before market open - incorrect indicative rate used,82,0.74
+71,FX hedge rate misapplied to wrong transaction batch,81,0.73
+72,Fallback rate not updated after primary feed outage,72,0.65
