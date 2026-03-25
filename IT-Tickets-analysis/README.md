@@ -18,7 +18,6 @@ A comprehensive data science approach to analyzing and optimizing IT support ope
 2. Response and Resolution Metrics
    - Average ticket resolution time
    - First response time
-   - SLA compliance percentage
    - SLA breaches
   
 
@@ -52,9 +51,8 @@ A comprehensive data science approach to analyzing and optimizing IT support ope
 ## Dashboard Insights
 Power BI Dashboard Includes:
 - Ticket Volume Trends
-- Resolution Time Heatmaps
+- Resolution Time visualizations
 - Department-wise Support Metrics
-- Predictive Workload Forecasting
 - SLA Compliance Visualization
 
 ## Machine Learning Applications
