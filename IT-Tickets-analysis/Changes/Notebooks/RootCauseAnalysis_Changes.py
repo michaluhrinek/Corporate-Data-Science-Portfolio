@@ -4,8 +4,8 @@ import os
 import polars as pl 
 
 # === Define File Paths ===
-input_file_path = r"synthetic_service_request_bank_data_weighted.csv"
-output_file_path = r"C:\Users\X\Downloads\Root_Cause_Analysis_service_request_data.csv"  #change X for your username
+input_file_path = r"synthetic_changes_data_2025.csv"
+output_file_path = r"C:\Users\X\Downloads\Root_Cause_Analysis_Changes.csv"  #change X for your username
 
 # === Step 1: Load the Dataset ===
 print(f"Loading data from: {input_file_path}")
