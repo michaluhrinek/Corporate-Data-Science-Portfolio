@@ -39,7 +39,7 @@ scaled_features = scaler.fit_transform(features)
 
 #Train the model one-class SVM 
 # Initialize One-Class SVM
-oc_svm = OneClassSVM(kernel="rbf", gamma=0.1, nu=0.05)  # gamma and nu control sensitivity , later in evaluation we will do sensitivity analysis for nu values so you can set up different nu values to see how it affects the number of anomalies detected
+oc_svm = OneClassSVM(kernel="rbf", gamma=0.1, nu=0.05)  
 # Train the One-Class SVM on scaled features
 oc_svm.fit(scaled_features)
 
