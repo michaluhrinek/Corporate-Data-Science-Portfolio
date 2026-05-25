@@ -31,7 +31,7 @@ import numpy as np
 from sentence_transformers import SentenceTransformer  #used for test preprocessing and embeddings
 from collections import defaultdict   #count tickets occurrences per group for the final theme analysis
 
-# CONFIG  #is to ensure the code works regardless of where it is executed. This method makes your script portable and avoids errors related to file paths.
+# CONFIG  #is to ensure the code works regardless of where it is executed. 
 # ------------------------------------------------------------------------------------
 SCRIPT_DIR       = os.path.dirname(os.path.abspath(__file__)) # Get the directory of the current script
 CSV_PATH         = os.path.join(SCRIPT_DIR, "synthetic_incident_bank_data_weighted.csv") # Path to the input CSV file (adjust if your file is located elsewhere)
