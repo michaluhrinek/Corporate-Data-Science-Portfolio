@@ -5,7 +5,7 @@ import polars as pl
 import os
 
 # Define file paths
-input_file_path = r"synthetic_service_request_bank_data_weighted.csv"
+input_file_path = r"synthetic_service_request_data_2025.csv
 output_file_path = r"C:\Users\X\Downloads\EIDA_service_request_data.csv"  #change X for your username
 
 # Check if file exists
