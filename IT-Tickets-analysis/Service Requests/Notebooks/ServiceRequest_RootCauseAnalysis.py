@@ -5,7 +5,7 @@ import os
 import polars as pl 
 
 # === Define File Paths ===
-input_file_path = r"synthetic_service_request_bank_data_weighted.csv"
+input_file_path = r"synthetic_service_request_data_2025.csv"
 output_file_path = r"C:\Users\X\Downloads\Root_Cause_Analysis_service_request_data.csv"  #change X for your username
 
 # Load the Dataset 
@@ -233,74 +233,6 @@ else:
 # === Save Final RCA Results to File ===
 df.write_csv(output_file_path)
 print(f"\nRoot Cause Analysis results saved to: {output_file_path}")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
