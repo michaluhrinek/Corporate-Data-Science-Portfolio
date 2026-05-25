@@ -108,8 +108,7 @@ print("\nPredicted vs Actual Values (Sample Comparison):")
 for i in range(10):
     print(f"Predicted: {y_pred[i]:.2f}, Actual: {y_test[i]:.2f}")
 
-# -------------------------------------------
-# Prediction for a New Ticket
+
 # -------------------------------------------
 
 # Example Input: New Ticket Details
