@@ -1,0 +1,73 @@
+Rank,Phrase,Count,Pct
+1,Wrong payment details amended in Process X - error compounded,163,1.92
+2,Standing order set up with wrong payment amount,157,1.85
+3,Incorrect amount entered - customer overcharged,157,1.85
+4,Payment applied to wrong customer account after name match failure,150,1.77
+5,Incorrect currency conversion applied to basic payment,149,1.75
+6,Payment posted to wrong GL account - reconciliation discrepancy,148,1.74
+7,Payment not reversed after customer dispute was resolved,148,1.74
+8,Process X item closed without resolution - payment lost in queue,147,1.73
+9,Domestic transfer sent to dormant account - return not monitored,145,1.71
+10,Transaction limit breach not flagged during processing,145,1.71
+11,SEPA payment amount keyed incorrectly - underpayment to supplier,144,1.7
+12,Wrong fee applied to basic payment transaction,144,1.7
+13,Wrong account debited for basic payment instruction,143,1.68
+14,Process X item approved without verifying beneficiary details,141,1.66
+15,Wrong IBAN updated during manual correction in Process X,140,1.65
+16,Duplicate payment entry not caught before submission,139,1.64
+17,SEPA payment sent to closed account - return not processed timely,138,1.63
+18,Wrong sort code entered - domestic payment routed to wrong bank,138,1.63
+19,Process X item duplicated after system timeout during save,138,1.63
+20,SEPA recall issued too late - funds already credited and withdrawn,137,1.61
+21,Payment released from Process X to wrong processing queue,136,1.6
+22,Duplicate SEPA batch uploaded - double payments issued to beneficiaries,135,1.59
+23,Basic payment processed on wrong value date,133,1.57
+24,Manual override applied in Process X without supervisor sign-off,131,1.54
+25,SEPA batch submitted after cut-off - delayed by one business day,130,1.53
+26,Process X SLA breached - payment delayed beyond agreed window,130,1.53
+27,Basic payment keyed with transposed digits in account number,128,1.51
+28,Process X item released without required dual authorisation,128,1.51
+29,Payment in Process X actioned by unauthorised operator,127,1.5
+30,Wrong creditor name in SEPA file causing beneficiary mismatch,127,1.5
+31,Wrong IBAN entered in bulk SEPA file - batch partially rejected,126,1.48
+32,Incorrect amount corrected to wrong value during manual review,126,1.48
+33,Payment limit exceeded due to manual override without approval,126,1.48
+34,Wrong currency applied to domestic GBP payment,125,1.47
+35,Batch domestic file contained incorrect beneficiary account details,123,1.45
+36,Incorrect end-to-end reference causing reconciliation failure,121,1.43
+37,SEPA file submitted with incorrect execution date,121,1.43
+38,Payment sent without required second authorisation,121,1.43
+39,Domestic payment submitted twice - duplicate detected post-settlement,120,1.41
+40,Wrong remittance information causing invoice matching failure,118,1.39
+41,Incorrect account number used - funds credited to wrong customer,117,1.38
+42,Payment dispatched to sanctioned entity - compliance breach,116,1.37
+43,Payment instruction processed without customer authorisation,115,1.35
+44,Missing payment reference - correspondent bank unable to apply funds,114,1.34
+45,SWIFT message sent with incorrect sender reference,114,1.34
+46,Operator amended wrong field in Process X - further error introduced,113,1.33
+47,Mandate reference missing from SEPA Direct Debit submission,112,1.32
+48,Wrong payment date configured - standing order triggered early,112,1.32
+49,Incorrect payee reference causing failure to match invoice,105,1.24
+50,Wrong debtor account used in SEPA Direct Debit collection,104,1.22
+51,Duplicate international wire submitted - double payment issued,101,1.19
+52,Incorrect BIC code used - wire transfer routed to wrong bank,98,1.15
+53,Manual rate entry typo caused overcharge to client,96,1.13
+54,Reversal not processed after customer cancellation request,95,1.12
+55,Wrong beneficiary IBAN entered - payment sent to incorrect account,94,1.11
+56,Payment submitted without required compliance pre-approval,93,1.1
+57,Incorrect interest rate applied to overnight settlement,93,1.1
+58,Wrong account debited - fee charged to incorrect cost centre,93,1.1
+59,Incorrect amount entered - overpayment of 10x original value,93,1.1
+60,Wrong value date set - payment settled one day early,92,1.08
+61,Wrong currency pair rate applied - EUR/GBP used instead of EUR/USD,91,1.07
+62,FX rate applied before market open - incorrect indicative rate used,91,1.07
+63,Cross-rate calculation error not caught before payment dispatch,90,1.06
+64,Wrong currency selected - USD payment sent instead of EUR,89,1.05
+65,Incorrect correspondent bank selected for USD settlement,88,1.04
+66,Rate effective date set incorrectly - wrong rate applied to batch,81,0.95
+67,Wrong FX rate applied to customer transaction - financial loss,81,0.95
+68,FX hedge rate misapplied to wrong transaction batch,80,0.94
+69,Incorrect rate override entered manually by operator,78,0.92
+70,Rate tolerance breach not escalated to treasury desk,77,0.91
+71,Stale rate used after feed failure - not escalated in time,75,0.88
+72,Fallback rate not updated after primary feed outage,57,0.67

@@ -1,0 +1,11 @@
+Rank,Phrase,Count,Pct
+1,Wrong payment details amended in Process X - error compounded,163,1.92
+2,Standing order set up with wrong payment amount,157,1.85
+3,Incorrect amount entered - customer overcharged,157,1.85
+4,Payment applied to wrong customer account after name match failure,150,1.77
+5,Incorrect currency conversion applied to basic payment,149,1.75
+6,Payment posted to wrong GL account - reconciliation discrepancy,148,1.74
+7,Payment not reversed after customer dispute was resolved,148,1.74
+8,Process X item closed without resolution - payment lost in queue,147,1.73
+9,Domestic transfer sent to dormant account - return not monitored,145,1.71
+10,Transaction limit breach not flagged during processing,145,1.71
