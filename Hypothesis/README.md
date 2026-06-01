@@ -2,7 +2,7 @@
 
 **Question:** Did EUR/USD volatility change between two periods?
 
-## What you'll learn
+## What we will do in this part?
 
 - How to fetch real economic data from the European Central Bank
 - The two-sample t-test (compare averages between two groups)
@@ -18,12 +18,6 @@
 4. Tests whether the volatility is different between periods (F-test)
 5. Produces a chart and a written report with the result
 
-## How to run
-
-```bash
-pip install -r requirements.txt
-python run_all.py
-```
 
 If the ECB download fails (no internet, API change), the project automatically falls back to synthetic data so you can still run the analysis.
 
