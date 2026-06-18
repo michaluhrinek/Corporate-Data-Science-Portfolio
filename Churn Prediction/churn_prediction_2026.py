@@ -38,11 +38,12 @@ X_train, X_test, y_train, y_test = train_test_split(
 #scaler part   ----think of it like everything is different unit(kg, cm, dollars) but after scaler its all the same unit 
 scaler    = StandardScaler()
 X_train_s = scaler.fit_transform(X_train)
-X_test_s  = scaler.transform(X_test)   # apply only on test, never fit
+X_test_s  = scaler.transform(X_test)   # apply only on test, never fit on test data, because we want to simulate real world where we dont have access to test data when we train the model, so we only apply the same transformation that we learned from train data to test data
 
-#fitting the model
-lr = LogisticRegression(random_state=42, max_iter=1000) #defaul value of sklearn is usually 100, but sometimes data is complex, features are many, scaling isnt perfect so we increase it
-
+# fitting the model
+lr = LogisticRegression(random_state=42, max_iter=1000)
+ #defaul value of sklearn is usually 100, but sometimes data is complex, features are many, scaling isnt perfect so we increase it
+lr.fit(X_train_s, y_train)
 #prediction
 y_pred_lr  = lr.predict(X_test_s)              
 y_proba_lr = lr.predict_proba(X_test_s)[:, 1]
