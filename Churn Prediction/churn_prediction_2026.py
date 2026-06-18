@@ -30,19 +30,18 @@ X = df.select(features).to_numpy()
 
 y = df["churned"].to_numpy()            
 
-#train test split part
+#train test split part...80% traub m 20% test 42 that every time this runs, it will be rundom numbers 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y  
 )
 
-#scaler part
+#scaler part   ----think of it like everything is different unit(kg, cm, dollars) but after scaler its all the same unit 
 scaler    = StandardScaler()
 X_train_s = scaler.fit_transform(X_train)
 X_test_s  = scaler.transform(X_test)   # apply only on test, never fit
 
 #fitting the model
-lr = LogisticRegression(random_state=42, max_iter=1000)
-lr.fit(X_train_s, y_train)
+lr = LogisticRegression(random_state=42, max_iter=1000) #defaul value of sklearn is usually 100, but sometimes data is complex, features are many, scaling isnt perfect so we increase it
 
 #prediction
 y_pred_lr  = lr.predict(X_test_s)              
@@ -149,7 +148,7 @@ X_active = active_users.select(features).to_numpy()
 #predict probabilities 
 probabilities = model.predict_proba(X_active)[:,1]
 
-#add prediction clumn back into polars 
+#add prediction column back into polars 
 active_users=active_users.with_columns(
     pl.Series(name="churn_probability_30_days",values=probabilities)
 )
